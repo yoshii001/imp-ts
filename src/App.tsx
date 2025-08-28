@@ -28,6 +28,18 @@ import DonorProfile from './pages/donor/DonorProfile';
 import DonorNotifications from './pages/donor/DonorNotifications';
 import DonorLeaderboard from './pages/donor/DonorLeaderboard';
 
+// Campaign Leader Pages
+import LeaderDashboard from './pages/leader/LeaderDashboard';
+import MyCampaigns from './pages/leader/MyCampaigns';
+import CreateCampaign from './pages/leader/CreateCampaign';
+import LeaderAnalytics from './pages/leader/LeaderAnalytics';
+
+// Admin Pages
+import AdminDashboard from './pages/admin/AdminDashboard';
+import CampaignManagement from './pages/admin/CampaignManagement';
+import UserManagement from './pages/admin/UserManagement';
+import PlatformReports from './pages/admin/PlatformReports';
+
 import NotFound from './pages/NotFound';
 
 const queryClient = new QueryClient();
@@ -76,16 +88,16 @@ const App = () => (
                 <Route path="/donor/leaderboard" element={<DonorLeaderboard />} />
                 
                 {/* Campaign Leader Routes */}
-                <Route path="/leader/dashboard" element={<ComingSoon title="Campaign Leader Dashboard" />} />
-                <Route path="/leader/campaigns" element={<ComingSoon title="My Campaigns" />} />
-                <Route path="/leader/create" element={<ComingSoon title="Create Campaign" />} />
-                <Route path="/leader/analytics" element={<ComingSoon title="Campaign Analytics" />} />
+                <Route path="/leader/dashboard" element={<LeaderDashboard />} />
+                <Route path="/leader/campaigns" element={<MyCampaigns />} />
+                <Route path="/leader/create" element={<CreateCampaign />} />
+                <Route path="/leader/analytics" element={<LeaderAnalytics />} />
                 
                 {/* Admin Routes */}
-                <Route path="/admin/dashboard" element={<ComingSoon title="Admin Dashboard" />} />
-                <Route path="/admin/campaigns" element={<ComingSoon title="Campaign Management" />} />
-                <Route path="/admin/users" element={<ComingSoon title="User Management" />} />
-                <Route path="/admin/reports" element={<ComingSoon title="Platform Reports" />} />
+                <Route path="/admin/dashboard" element={<AdminDashboard />} />
+                <Route path="/admin/campaigns" element={<CampaignManagement />} />
+                <Route path="/admin/users" element={<UserManagement />} />
+                <Route path="/admin/reports" element={<PlatformReports />} />
                 
                 {/* 404 Route */}
                 <Route path="*" element={<NotFound />} />
